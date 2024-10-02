@@ -75,7 +75,7 @@
 					   {{{ if privileges.isAdminOrMod }}}
 							<!-- Pin button, visible only when the post is not pinned -->
 							<a component="topic/pin" href="#" class="btn-ghost-sm d-flex align-items-center gap-1" role="menuitem" {{{ if ./pinned }}} hidden{{{ end }}}>
-								<i class="fa fa-fw fa-thumb-tack text-primary"></i> [[topic:pinned]]
+								<i class="fa fa-fw fa-thumb-tack text-primary"></i> [[topic:thread-tools.pin]]
 							</a>
 
 							<!-- Unpin button, visible only when the post is pinned -->
