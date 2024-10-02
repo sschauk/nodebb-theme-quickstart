@@ -70,6 +70,19 @@
 					</div>
 
 					<a href="{config.relative_path}/topic/{./slug}" class="d-none d-lg-block badge bg-transparent text-muted fw-normal timeago" title="{./timestampISO}"></a>
+
+					<!-- New Pin/Unpin Buttons directly in post actions -->
+					   {{{ if privileges.isAdminOrMod }}}
+							<!-- Pin button, visible only when the post is not pinned -->
+							<a component="topic/pin" href="#" class="btn-ghost-sm d-flex align-items-center gap-1" role="menuitem" {{{ if ./pinned }}} hidden{{{ end }}}>
+								<i class="fa fa-fw fa-thumb-tack text-primary"></i> [[topic:thread-tools.pin]]
+							</a>
+
+							<!-- Unpin button, visible only when the post is pinned -->
+							<a component="topic/unpin" href="#" class="btn-ghost-sm d-flex align-items-center gap-1" role="menuitem" {{{ if !./pinned }}} hidden{{{ end }}}>
+								<i class="fa fa-fw fa-thumb-tack fa-rotate-90 text-secondary"></i> [[topic:thread-tools.unpin]]
+							</a>
+						{{{ end }}}
 				</span>
 				{{{ if showSelect }}}
 				<div class="checkbox position-absolute top-0 end-0 m-0 d-flex d-lg-none" style="max-width:max-content">
