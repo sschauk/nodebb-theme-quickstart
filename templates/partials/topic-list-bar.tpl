@@ -36,6 +36,11 @@
 			</div>
 
 			<div class="d-flex gap-1 align-items-center">
+				<!-- Search Bar with Button -->
+				<div class="input-group flex-nowrap w-auto">
+					<input type="text" class="form-control form-control-sm w-auto" placeholder="[[global:search]]">
+					<span class="input-group-text px-2 search-button"><i class="fa fa-search"></i></span>
+				</div>
 				{{{ if template.category }}}
 					{{{ if privileges.topics:create }}}
 					<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary btn-sm text-nowrap" data-ajaxify="false" role="button">[[category:new-topic-button]]</a>
@@ -50,11 +55,7 @@
 				<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-sm btn-primary">[[category:guest-login-post]]</a>
 				{{{ end }}}
 				<br>
-				<!-- Search Bar with Button -->
-				<div class="input-group flex-nowrap w-auto">
-					<input type="text" class="form-control form-control-sm w-auto" placeholder="[[global:search]]">
-					<span class="input-group-text px-2 search-button"><i class="fa fa-search"></i></span>
-				</div>
+
 			</div>
 		</div>
 	</nav>
