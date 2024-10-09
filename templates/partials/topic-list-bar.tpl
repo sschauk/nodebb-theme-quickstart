@@ -38,7 +38,7 @@
 			<div class="d-flex gap-1 align-items-center">
 				<!-- Search Bar with Button -->
 				<div class="input-group flex-nowrap w-auto">
-					<input type="text" class="form-control form-control-sm w-auto" placeholder="[[global:search]]">
+					<input id="topicSearchInput" type="text" class="form-control form-control-sm w-auto" placeholder="[[global:search]]">
 					<span class="input-group-text px-2 search-button"><i class="fa fa-search"></i></span>
 				</div>
 				{{{ if template.category }}}
