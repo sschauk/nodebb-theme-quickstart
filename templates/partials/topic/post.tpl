@@ -61,8 +61,7 @@
 
 		<div class="content mt-2 text-break" component="post/content" itemprop="text">
 			{posts.content}
-		</div>
-	        {{{if !posts.isEnglish }}}
+			{{{if !posts.isEnglish }}}
 		        <div class="sensitive-content-message">
 		        <a class="btn btn-sm btn-primary view-translated-btn">Click here to view the translated message.</a>
 		        </div>
@@ -70,6 +69,7 @@
 		        {posts.translatedContent}
 		        </div>
 	        {{{end}}}
+		</div>
 	</div>
 </div>
 
